@@ -43,3 +43,6 @@ run_menu() {
     # debug =>
     debug;
 }
+
+### RUN
+run_menu
