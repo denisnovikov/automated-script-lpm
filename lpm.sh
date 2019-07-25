@@ -29,6 +29,26 @@ debug() {
     fi
 }
 
+create_project_folder() {
+    # Создание папки проекта
+    clear;
+    echo 'Создаю директорию' $prompt;
+    mkdir -p ${DEFAULT_DIR_PROJECT}/${prompt}/www;
+
+    echo 'Создаю .editorconfig';
+    echo 'root = true
+
+[*]
+tab_width = 4
+indent_size = 4
+charset = utf-8
+end_of_line = lf
+indent_style = tab
+max_line_length = 120
+insert_final_newline = true
+trim_trailing_whitespace = true' >> ${DEFAULT_DIR_PROJECT}/${prompt}/.editorconfig;
+}
+
 run_menu() {
     # Отображение главного меню
     clear;
