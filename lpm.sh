@@ -120,11 +120,17 @@ run_menu_project_create() {
     # debug =>
     debug;
 
+    # next step
+    create_project_folder;
+
     echo -n 'Введите имя базы данных: ';
     read prompt;
 
     # debug =>
     debug;
+
+    # next step
+    create_mysql_db;
 }
 
 select_run_menu() {
