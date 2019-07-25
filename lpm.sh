@@ -5,3 +5,18 @@
 # Автор: Denis Novikov <dnovikov1808@gmail.com>
 # Версия: 1.0.0
 ###############################################################
+
+### VARIABLES
+#### bool
+DEBUG=FALSE
+
+#### string, default dir
+DEFAULT_DIR_NGINX=/etc/nginx
+DEFAULT_DIR_NGINX_AVAILABLE=${DEFAULT_DIR_NGINX}/sites-available/
+DEFAULT_DIR_NGINX_ENABLED=${DEFAULT_DIR_NGINX}/sites-enabled/
+DEFAULT_DIR_HOME=/home
+DEFAULT_DIR_USER=${DEFAULT_DIR_HOME}/orange/
+DEFAULT_DIR_PROJECT=${DEFAULT_DIR_USER}/project/
+
+#### string, default name
+DEFAULT_NAME='deploy'
