@@ -20,6 +20,7 @@ DEFAULT_DIR_PROJECT=${DEFAULT_DIR_USER}/projects
 
 #### string, default name
 DEFAULT_NAME='deploy'
+DEFAULT_RESTORE_LINK=http://www.1c-bitrix.ru/download/scripts/restore.php
 
 ### FUNCTIONS
 debug() {
