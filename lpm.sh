@@ -121,5 +121,14 @@ run_menu_project_create() {
     debug;
 }
 
+select_run_menu() {
+    # Вызов дальнейших действий
+    if [[ $prompt == 1 ]]; then
+        run_menu_project;
+    else
+        echo 'Команда не найдена'
+    fi
+}
+
 ### RUN
 run_menu
