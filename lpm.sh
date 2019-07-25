@@ -26,7 +26,9 @@ DEFAULT_RESTORE_LINK=http://www.1c-bitrix.ru/download/scripts/restore.php
 debug() {
     if [[ $DEBUG == TRUE ]]; then
         echo 'Пользователь ввел: ' $prompt;
-        sleep 2;
+
+        echo 'Нажмите любую клавишу для продолжения...'
+        read -s -n 1
     fi
 }
 
