@@ -20,3 +20,11 @@ DEFAULT_DIR_PROJECT=${DEFAULT_DIR_USER}/project/
 
 #### string, default name
 DEFAULT_NAME='deploy'
+
+### FUNCTIONS
+debug() {
+    if [[ $DEBUG == TRUE ]]; then
+        echo 'Пользователь ввел: ' $prompt;
+        sleep 2;
+    fi
+}
