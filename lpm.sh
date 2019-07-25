@@ -61,5 +61,24 @@ run_menu_project() {
     debug;
 }
 
+run_menu_project_create() {
+    # Отображение меню "Создать новый проект"
+    clear;
+    echo 'Главное меню >> Работа с проектом >> Создать новый проект';
+    echo 'Для создания нового проекта, потребуется уточнить:';
+
+    echo -n 'Введите имя проекта: ';
+    read prompt;
+
+    # debug =>
+    debug;
+
+    echo -n 'Введите имя базы данных: ';
+    read prompt;
+
+    # debug =>
+    debug;
+}
+
 ### RUN
 run_menu
