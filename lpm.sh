@@ -103,6 +103,9 @@ run_menu_project() {
 
     # debug =>
     debug;
+
+    # next step =>
+    select_run_menu_project;
 }
 
 run_menu_project_create() {
