@@ -49,6 +49,21 @@ insert_final_newline = true
 trim_trailing_whitespace = true' >> ${DEFAULT_DIR_PROJECT}/${prompt}/.editorconfig;
 }
 
+create_mysql_db() {
+    # Создание базы данных
+    clear;
+    echo 'ВНИМАНИЕ! ДАЛЬШЕЙШИЕ ДЕЙСТВИЯ ВЫПОЛНЯЮТСЯ ОТ ROOT';
+    echo 'Создаю нового пользователя базы данных '$prompt'...';
+    sudo mysql -e "CREATE USER '$prompt'@'localhost' IDENTIFIED BY '$prompt'"
+
+    echo 'Создаю новую базу данных '$prompt'...';
+    sudo mysql -e "CREATE DATABASE $prompt"
+
+    echo 'Связываю пользователя' $prompt 'с базой данных ' $prompt'...';
+    sudo mysql -e "GRANT ALL PRIVILEGES ON $prompt.* TO '$prompt'@'localhost'"
+    sudo mysql -e "FLUSH PRIVILEGES"
+}
+
 run_menu() {
     # Отображение главного меню
     clear;
