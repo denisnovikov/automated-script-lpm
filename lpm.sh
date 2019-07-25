@@ -83,6 +83,9 @@ run_menu() {
 
     # debug =>
     debug;
+
+    # next step =>
+    select_run_menu;
 }
 
 run_menu_project() {
