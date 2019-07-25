@@ -47,6 +47,9 @@ indent_style = tab
 max_line_length = 120
 insert_final_newline = true
 trim_trailing_whitespace = true' >> ${DEFAULT_DIR_PROJECT}/${prompt}/.editorconfig;
+
+    echo 'Нажмите любую клавишу для продолжения...'
+    read -s -n 1
 }
 
 create_mysql_db() {
@@ -62,6 +65,9 @@ create_mysql_db() {
     echo 'Связываю пользователя' $prompt 'с базой данных ' $prompt'...';
     sudo mysql -e "GRANT ALL PRIVILEGES ON $prompt.* TO '$prompt'@'localhost'"
     sudo mysql -e "FLUSH PRIVILEGES"
+
+    echo 'Нажмите любую клавишу для продолжения...'
+    read -s -n 1
 }
 
 run_menu() {
